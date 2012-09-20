@@ -5,8 +5,8 @@
 [hub]
         protocol = https
 [user]
-        name = Zach Holman
-        email = zach@zachholman.com
+	name = AvnerCohen
+	email = israbirding@gmail.com
 [credential]
         helper = osxkeychain
 [alias]
@@ -22,7 +22,7 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = vim
+	editor = subl -w
 [apply]
         whitespace = nowarn
 [mergetool]

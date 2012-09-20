@@ -1,1 +1,1 @@
-export RBXOPT=-Xrbc.db=/tmp/rbx
+export RBXOPT=-X19
