@@ -72,8 +72,15 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-#export PROMPT=$'\n$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
-export PROMPT=$'$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)> '
+export PROMPT=$'\n$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
+## Using a newline in here requirs a change to sublime text, if you want to run ruby test.
+## Should should be to change line 45 of exec.py, found in 
+# ~/Library/Application Support/Sublime Text 2/Packages/Default, to:
+# os.path.expandvars(v.decode(sys.getfilesystemencoding())).encode(sys.getfilesystemencoding())
+# compile the py to pyc using:
+# $ python
+# >>> import py_compile
+# >>> py_compile.compile('exec.y')
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
 }
