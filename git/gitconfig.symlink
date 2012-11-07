@@ -30,7 +30,7 @@
 [difftool]
         prompt = false
 [help]
-        autocorrect = 1
+	autocorrect = 1
 [mergetool "sublime"]
 	cmd = subl -w $MERGED
 	trustExitCode = false
