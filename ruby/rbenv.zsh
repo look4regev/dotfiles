@@ -1,5 +1,5 @@
 # rehash shims
-rbenv rehash 2>/dev/null
+#rbenv rehash 2>/dev/null
 
 # shell thing
 rbenv() {
