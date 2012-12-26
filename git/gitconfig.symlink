@@ -5,8 +5,8 @@
 [hub]
         protocol = https
 [user]
-	name = AvnerCohen
-	email = israbirding@gmail.com
+	name = Avner Cohen
+	email = avner.cohen@fiverr.com
 [credential]
         helper = osxkeychain
 [alias]
