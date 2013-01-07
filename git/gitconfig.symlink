@@ -23,6 +23,7 @@
 [core]
         excludesfile = ~/.gitignore
 	editor = subl -w
+	mergeoptions = --no-edit
 [apply]
         whitespace = nowarn
 [mergetool]
