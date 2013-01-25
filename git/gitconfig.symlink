@@ -37,3 +37,7 @@
 	trustExitCode = false
 [merge]
 	tool = sublime
+[push]
+	default = upstream
+[branch]
+	autosetuprebase = always
