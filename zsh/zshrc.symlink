@@ -25,3 +25,4 @@ export PATH="$PATH:H$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:./node_modules/.bin #add npm modules of current project to path
