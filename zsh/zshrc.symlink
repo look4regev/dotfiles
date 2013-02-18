@@ -18,6 +18,8 @@ fi
 autoload -U compinit
 compinit
 
+source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.zsh) source $config_file
 export PATH="$PATH:H$HOME/.rvm/bin"
