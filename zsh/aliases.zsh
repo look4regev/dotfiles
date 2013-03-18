@@ -8,4 +8,4 @@ alias history='history -100'
 alias clean_routes="rake routes | sed -e '1d' -e 's,^[^/]*,,g' | awk '{print $1}' | sort | uniq"
 alias m="ssh admin@monitorin"
 alias jenk="java -jar /usr/local/opt/jenkins/libexec/jenkins.war"
-alias gitdo="git fetch;git rebase;git push"
+alias gr="git fetch ; git rebase -p"
