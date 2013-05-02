@@ -1,0 +1,7 @@
+gco()
+{
+  git checkout $*
+  cur_path=$PWD;
+  cd ~/
+  cd $cur_path;
+}
