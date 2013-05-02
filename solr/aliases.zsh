@@ -1,1 +1,1 @@
-alias solrup='solr /usr/local/opt/solr/libexec/example/solr'
+alias solrup='solr /usr/local/opt/solr/libexec/jetty/solr'
