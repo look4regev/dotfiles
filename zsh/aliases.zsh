@@ -8,4 +8,4 @@ alias clean_routes="rake routes | sed -e '1d' -e 's,^[^/]*,,g' | awk '{print $1}
 alias m="ssh admin@monitorin"
 alias jenk="java -jar /usr/local/opt/jenkins/libexec/jenkins.war"
 alias gr="git fetch ; git rebase -p"
-alias start_all="memcached & ; redis-up ; mysup ; mongod &"
+alias start_all="memcached & ; redis-up ; mysup ; mongod &; rabbitmq-server &"
