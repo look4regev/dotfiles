@@ -37,3 +37,7 @@
 	tool = sublime
 [credential]
 	helper = osxkeychain
+[diff]
+	tool = sdiff
+[difftool "sdiff"]
+	cmd = sdiff \"$LOCAL\" \"$REMOTE\"
