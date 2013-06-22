@@ -1,2 +1,2 @@
 export EDITOR='subl'
-export GOROOT='/usr/local/go'
+#export GOROOT='/usr/local/go'
