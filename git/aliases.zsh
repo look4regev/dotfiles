@@ -7,7 +7,7 @@ then
 fi
 
 # The rest of my fun git aliases
-alias glog="git log --graph --pretty=\"format:%C(yellow)%h%Cred%d%Creset %s %C(white) %C(cyan)%an%Creset, %C(green)%ar%Creset\""
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gaut="echo '#Repo authors sorted by number of commit.' > AUTHORS && git shortlog -n -s -e | awk '{t=$1;$1=\"\"; printf ; print \" -  \" t \" commits.\"}' >> AUTHORS"
