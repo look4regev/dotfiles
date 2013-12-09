@@ -7,12 +7,13 @@ git_branch() {
 }
 
 git_dirty() {
-  st=$(git status 2>/dev/null | tail -n 1)
-  if [[ $st == "" ]]
+  st=$(git status --porcelain)
+  commit_status=$(git status 2>/dev/null | tail -n 1)
+  if [[ $st == "" && $commit_status == "" ]]
   then
-    echo ""
+    echo " $(git_prompt_info) "
   else
-    if [[ $st == "nothing to commit, working directory clean" ]]
+    if [[ $commit_status == "nothing to commit, working directory clean" ]]
     then
       echo "on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
     else
@@ -23,7 +24,6 @@ git_dirty() {
 
 git_prompt_info () {
  ref=$(git symbolic-ref HEAD 2>/dev/null) || return
-# echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
  echo "${ref#refs/heads/}"
 }
 

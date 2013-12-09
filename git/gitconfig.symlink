@@ -16,7 +16,7 @@
         rank-contributers = !$ZSH/bin/git-rank-contributers
         count   = !git shortlog -sn
 	unpushed = diff origin/v2_frontend..HEAD --name-status
-	lastworks = for-each-ref --sort=-committerdate refs/heads/
+	lastworks = for-each-ref --count=4 --sort=-committerdate refs/heads/
 [color]
         diff = auto
         status = auto
@@ -33,7 +33,7 @@
 [difftool]
         prompt = false
 [help]
-	autocorrect = 1
+	autocorrect = -1 
 [mergetool "sublime"]
 	cmd = subl -w $MERGED
 	trustExitCode = false
