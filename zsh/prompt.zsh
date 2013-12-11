@@ -7,11 +7,11 @@ git_branch() {
 }
 
 git_dirty() {
-  st=$(git status --porcelain)
+  st=$(git status --porcelain 2>/dev/null)
   commit_status=$(git status 2>/dev/null | tail -n 1)
   if [[ $st == "" && $commit_status == "" ]]
   then
-    echo " $(git_prompt_info) "
+    echo " $(git_prompt_info) " 
   else
     if [[ $commit_status == "nothing to commit, working directory clean" ]]
     then
@@ -28,15 +28,16 @@ git_prompt_info () {
 }
 
 unpushed () {
-  git cherry -v @{upstream} 2>/dev/null
+  git cherry -v @{upstream} 2>/dev/null | wc -l | tr -d ' '
 }
 
 need_push () {
-  if [[ $(unpushed) == "" ]]
+  unpushed_count=$(unpushed)
+  if [[ $(unpushed) == "0" ]]
   then
     echo " "
   else
-    echo " with %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
+    echo " with %{$fg_bold[magenta]%}unpushed(%{$fg_bold[red]%}$unpushed_count%{$reset_color%}%{$fg_bold[magenta]%})%{$reset_color%} "
   fi
 }
 
