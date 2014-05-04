@@ -18,6 +18,7 @@ fi
 autoload -U compinit
 compinit
 
+
 source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # load every completion after autocomplete loads
