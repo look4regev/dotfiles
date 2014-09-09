@@ -16,7 +16,7 @@
         rank-contributers = !$ZSH/bin/git-rank-contributers
         count   = !git shortlog -sn
 	unpushed = diff origin/v2_frontend..HEAD --name-status
-	lastworks = for-each-ref --count=4 --sort=-committerdate refs/heads/
+	lastworks = for-each-ref --count=10 --sort=-committerdate refs/heads/
 [color]
         diff = auto
         status = auto
