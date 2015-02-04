@@ -10,13 +10,14 @@
 [credential]
         helper = osxkeychain
 [alias]
-        co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributers = !$ZSH/bin/git-rank-contributers
-        count   = !git shortlog -sn
+    co = checkout
+    promote = !$ZSH/bin/git-promote
+    wtf     = !$ZSH/bin/git-wtf
+    rank-contributers = !$ZSH/bin/git-rank-contributers
+    count   = !git shortlog -sn
 	unpushed = diff origin/v2_frontend..HEAD --name-status
 	lastworks = for-each-ref --count=10 --sort=-committerdate refs/heads/
+    stags = !git for-each-ref --format='%(*committerdate:raw)%(committerdate:raw) %(refname) %(*objectname) %(objectname)' refs/tags | sort -n | cut -d'/' -f 3 | cut -d' ' -f 1 
 [color]
         diff = auto
         status = auto
