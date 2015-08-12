@@ -25,7 +25,7 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-	editor = subl -w
+	editor = vi
 	mergeoptions = --no-edit
 [apply]
         whitespace = nowarn
