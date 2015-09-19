@@ -41,3 +41,5 @@
 	tool = sdiff
 [difftool "sdiff"]
 	cmd = sdiff \"$LOCAL\" \"$REMOTE\"
+[push]
+	default = simple
