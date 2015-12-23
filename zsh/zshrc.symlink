@@ -35,3 +35,6 @@ PATH=$PATH:./node_modules/.bin #add npm modules of current project to path
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+PERL_MB_OPT="--install_base \"/Users/avner/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/avner/perl5"; export PERL_MM_OPT;

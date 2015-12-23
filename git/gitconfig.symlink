@@ -3,7 +3,6 @@
 # You probably want to change the [user] section here since you are not me.
 
 [hub]
-        protocol = https
 [user]
 	name = Avner Cohen
 	email = israbirding@gmail.com
@@ -18,6 +17,7 @@
 	unpushed = diff origin/v2_frontend..HEAD --name-status
 	lastworks = for-each-ref --count=10 --sort=-committerdate refs/heads/
     stags = !git for-each-ref --format='%(*committerdate:raw)%(committerdate:raw) %(refname) %(*objectname) %(objectname)' refs/tags | sort -n | cut -d'/' -f 3 | cut -d' ' -f 1 
+	glog = "!git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative ; true"
 [color]
         diff = auto
         status = auto
@@ -44,3 +44,5 @@
 	default = upstream
 [branch]
 	autosetuprebase = always
+[status]
+	showUntrackedFiles = all

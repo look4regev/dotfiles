@@ -1,11 +1,11 @@
 alias reload!='. ~/.zshrc'
 alias mou='/Applications/Mou.app/Contents/MacOS/Mou'
-alias bi='bundle install '
+alias bi='bundle install -j4'
 alias ginit='git init && git add . && git commit -am "Initial commit"'
 alias set_heroku='~/dev/repos/shorts/set_heroku_env.sh'
 alias history='history -100'
 alias clean_routes="rake routes | sed -e '1d' -e 's,^[^/]*,,g' | awk '{print $1}' | sort | uniq"
-alias m="ssh admin@monitorin"
+alias m="ssh admin@gateway.fiverr-gw.com"
 alias jenk="java -jar /usr/local/opt/jenkins/libexec/jenkins.war"
 alias gr="git fetch origin ; git rebase -p"
 alias start_all="memcached & ; redis-up ; mysup ; mongod &; rabbitmq-server &"
