@@ -1,0 +1,8 @@
+brew install cask
+brew cask install slack
+brew cask install slack
+brew cask install iterm2
+brew cask install slack
+brew cask install spectacle
+brew cask install google-drive
+brew cask install gimp
