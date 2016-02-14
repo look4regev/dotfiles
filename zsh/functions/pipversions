@@ -1,0 +1,4 @@
+pipversions(){
+  local name_of_lib=$1
+  open  https://pypi.python.org/simple/$name_of_lib/
+}
