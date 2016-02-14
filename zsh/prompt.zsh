@@ -50,7 +50,7 @@ rb_prompt(){
 }
 
 virtual_env(){
-  if [ -z ${VIRTUAL_ENV+x} ]
+  if [[  $VIRTUAL_ENV == "" ]]
   then
   echo ""
   else
