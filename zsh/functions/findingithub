@@ -1,0 +1,4 @@
+findingithub(){
+  local texttosearch=$1
+  open "https://github.com/search?utf8=%E2%9C%93&q=user%3AHiredScore+%22$texttosearch%22&type=Code&ref=searchresults"
+}
