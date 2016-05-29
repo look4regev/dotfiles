@@ -26,3 +26,5 @@ PERL_MM_OPT="INSTALL_BASE=~/perl5"; export PERL_MM_OPT;
 
 ## Setup rbenv as ruby manager
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+dig +short -t txt istheinternetonfire.com
