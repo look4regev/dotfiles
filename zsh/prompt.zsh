@@ -12,7 +12,7 @@ git_dirty() {
   then
     echo ""
   else
-    if [[ $st == "nothing to commit, working directory clean" ]]
+    if [[ $st == *"nothing to commit"* ]]
     then
       echo "on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
     else
@@ -23,7 +23,6 @@ git_dirty() {
 
 git_prompt_info () {
  ref=$(git symbolic-ref HEAD 2>/dev/null) || return
-# echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
  echo "${ref#refs/heads/}"
 }
 
@@ -43,18 +42,18 @@ need_push () {
 rb_prompt(){
   if $(which rbenv &> /dev/null)
   then
-	  echo "rb: %{$fg_bold[yellow]%}$(rbenv version | awk '{print $1}')%{$reset_color%}"
-	else
-	  echo ""
+    echo "rb: %{$fg_bold[yellow]%}$(rbenv version | awk '{print $1}')%{$reset_color%}"
+  else
+    echo ""
   fi
 }
 
 virtual_env(){
   if [[  $VIRTUAL_ENV == "" ]]
   then
-  echo ""
+    echo ""
   else
-  echo " (py: %{$fg_bold[yellow]%}$(basename "$VIRTUAL_ENV"))%{$reset_color%}"
+    echo " (py: %{$fg_bold[yellow]%}$(basename "$VIRTUAL_ENV"))%{$reset_color%}"
   fi
 }
 
