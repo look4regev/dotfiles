@@ -1,3 +1,4 @@
+#zmodload zsh/zprof
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
@@ -15,9 +16,11 @@ then
   source ~/.localrc
 fi
 
-# initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+  autoload -U compinit
+else
+  autoload -U compinit -C
+fi
 
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.zsh) source $config_file
@@ -27,4 +30,11 @@ PERL_MM_OPT="INSTALL_BASE=~/perl5"; export PERL_MM_OPT;
 ## Setup rbenv as ruby manager
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-dig +short -t txt istheinternetonfire.com
+#dig +short -t txt istheinternetonfire.com
+
+#source "$HOME/.antigen/antigen.zsh"
+#antigen-apply
+#antigen theme cloud
+
+
+#zprof

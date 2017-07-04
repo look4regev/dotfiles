@@ -27,22 +27,40 @@
 	editor = vim
 [apply]
         whitespace = nowarn
-[mergetool]
-        keepBackup = false
-[difftool]
-        prompt = false
+#[mergetool]
+#        keepBackup = false
+#[difftool]
+#        prompt = false
 [help]
 	autocorrect = 1
-[mergetool "sublime"]
-	cmd = subl -w $MERGED
-	trustExitCode = false
-[merge]
-	tool = sublime
+#[mergetool "sublime"]
+#	cmd = subl -w $MERGED
+#	trustExitCode = false
+#[merge]
+#	tool = sublime
 [credential]
 	helper = osxkeychain
+#[diff
+#	tool = sdiff
+#[difftool "sdiff"]
+#	cmd = sdiff \"$LOCAL\" \"$REMOTE\"
+
 [diff]
-	tool = sdiff
-[difftool "sdiff"]
-	cmd = sdiff \"$LOCAL\" \"$REMOTE\"
+  tool = meld
+[difftool]
+  prompt = false
+[difftool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args \"$LOCAL\" \"$PWD/$REMOTE\"
+[merge]
+  tool = meld
+[mergetool]
+  prompt = false
+[mergetool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
+
+
+
 [push]
 	default = simple
