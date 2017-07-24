@@ -5,7 +5,7 @@ export ZSH=$HOME/.dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Code
 export HSCODE=~/HSCode
-
+export GOPATH=~/go_path 
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
 
@@ -16,11 +16,13 @@ then
   source ~/.localrc
 fi
 
+autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
-  autoload -U compinit
+  compinit
 else
-  autoload -U compinit -C
+  compinit -C
 fi
+
 
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.zsh) source $config_file
