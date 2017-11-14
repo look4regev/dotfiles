@@ -16,13 +16,16 @@ then
   source ~/.localrc
 fi
 
+
 autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
-  compinit
+  rm ~/.zcompdump
+  compinit -d ~/.zcompdump
+  echo "compint"
 else
   compinit -C
+  echo "skipped compint"
 fi
-
 
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.zsh) source $config_file

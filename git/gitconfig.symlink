@@ -27,10 +27,6 @@
 	editor = vim
 [apply]
         whitespace = nowarn
-#[mergetool]
-#        keepBackup = false
-#[difftool]
-#        prompt = false
 [help]
 	autocorrect = 1
 #[mergetool "sublime"]
