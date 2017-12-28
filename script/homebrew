@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 #
 # Homebrew
 #
@@ -8,12 +8,32 @@
 # Check for Homebrew
 if test ! $(which brew)
 then
-  echo "  x You should probably install Homebrew first:"
-  echo "    https://github.com/mxcl/homebrew/wiki/installation"
-  exit
+  echo "  x Installing homebrew"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
   echo "  + Homebrew found."
 fi
 
-# Install grc and coreutils
 brew install grc coreutils
+brew install zsh
+echo "Installing oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+brew install diff-so-fancy
+brew install elasticsearch
+brew install kibana
+brew install logstash
+brew install gcc
+brew install git
+brew install hub
+brew install mongodb
+brew install node
+brew install yarn
+brew install python
+brew install python3
+brew install the_silver_searcher
+brew install wrk
+brew install rabbitmq
+brew install mysql
+brew install rmtrash
+brew install sqlite
+

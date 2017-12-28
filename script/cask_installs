@@ -1,8 +1,18 @@
 brew install cask
 brew cask install slack
 brew cask install iterm2
-brew cask install slack
+brew cask install sublime-text
+brew cask install amazon-chime
+brew cask install docker
+brew cask install java8
+brew cask install mongodb-compass
+brew cask install dropbox
+brew cask install diffmerge
+brew cask install skitch
+brew cask install viscosity
 brew cask install spectacle
 brew cask install google-drive
+brew cask install box
 brew cask install gimp
-brew cask install colloquy
+brew cask install clipy
+
