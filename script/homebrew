@@ -36,4 +36,3 @@ brew install rabbitmq
 brew install mysql
 brew install rmtrash
 brew install sqlite
-
