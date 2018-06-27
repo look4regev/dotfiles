@@ -37,3 +37,5 @@ brew install rmtrash
 brew install sqlite
 brew install ipython
 brew install postgresql
+brew install libxmlsec1
+
