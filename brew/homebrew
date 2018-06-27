@@ -29,10 +29,11 @@ brew install mongodb
 brew install node
 brew install yarn
 brew install python
-brew install python3
 brew install the_silver_searcher
 brew install wrk
 brew install rabbitmq
 brew install mysql
 brew install rmtrash
 brew install sqlite
+brew install ipython
+brew install postgresql
