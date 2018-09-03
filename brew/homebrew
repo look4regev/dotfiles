@@ -14,7 +14,6 @@ else
   echo "  + Homebrew found."
 fi
 
-brew install grc coreutils
 brew install zsh
 echo "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -29,6 +28,7 @@ brew install mongodb
 brew install node
 brew install yarn
 brew install python
+brew install python@2
 brew install the_silver_searcher
 brew install wrk
 brew install rabbitmq
@@ -38,4 +38,9 @@ brew install sqlite
 brew install ipython
 brew install postgresql
 brew install libxmlsec1
+brew install fd
+brew install tldr
+brew install prettyping
+brew install grc
+brew install coreutils
 
