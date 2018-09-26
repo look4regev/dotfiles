@@ -45,3 +45,5 @@ brew install tldr
 brew install prettyping
 brew install grc
 brew install coreutils
+brew install autojump
+
