@@ -1,0 +1,5 @@
+[user]
+	name = Regev Golan
+	email = look4regev@gmail.com
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
