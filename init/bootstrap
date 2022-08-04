@@ -9,4 +9,6 @@
 . init/cask_installs
 
 ln -sf ~/mygit/dotfiles/init/.myzshrc.sh ~/.myzshrc
+echo -e "source ~/.myzshrc\n" >> ~/.zshrc
+
 ln -sf ~/mygit/dotfiles/git/.gitconfig ~/.gitconfig
