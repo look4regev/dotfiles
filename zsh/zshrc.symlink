@@ -4,7 +4,6 @@ export ZSH=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Code
-export HSCODE=~/HSCode
 export GOPATH=~/go_path 
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
@@ -29,17 +28,3 @@ fi
 
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.zsh) source $config_file
-PERL_MB_OPT="--install_base \"~/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=~/perl5"; export PERL_MM_OPT;
-
-## Setup rbenv as ruby manager
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-#dig +short -t txt istheinternetonfire.com
-
-#source "$HOME/.antigen/antigen.zsh"
-#antigen-apply
-#antigen theme cloud
-
-
-#zprof

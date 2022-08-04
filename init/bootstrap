@@ -7,4 +7,3 @@
 
 # Install GUI related cask using brew and cask itself 
 . brew/cask_installs
-
