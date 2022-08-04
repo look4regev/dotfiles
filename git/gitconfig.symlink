@@ -5,8 +5,8 @@
 [hub]
         protocol = https
 [user]
-	name = Avner Cohen
-	email = israbirding@gmail.com
+	name = Regev Golan
+	email = look4regev@gmail.com
 [credential]
 [alias]
         co = checkout
