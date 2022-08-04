@@ -1,0 +1,14 @@
+[user]
+	name = Regev Golan
+	email = look4regev@gmail.com
+[alias]
+	rank-contributers = !$ZSH/bin/git-rank-contributers
+	count = !git shortlog -sn
+	lastworks = for-each-ref --count=10 --sort=-committerdate refs/heads/
+	stags = !git for-each-ref --format='%(*committerdate:raw)%(committerdate:raw) %(refname) %(*objectname) %(objectname)' refs/tags | sort -n | cut -d'/' -f 3 | cut -d' ' -f 1
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[help]
+	autocorrect = 1
