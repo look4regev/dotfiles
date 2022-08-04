@@ -9,35 +9,20 @@
 if test ! $(which brew)
 then
   echo "  x Installing homebrew"
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
   echo "  + Homebrew found."
 fi
 
 brew install zsh
 echo "Installing oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 brew install diff-so-fancy
-brew install elasticsearch
-brew install kibana
-brew install logstash
 brew install gcc
 brew install git
-brew install hub
-brew install mongodb
-brew install node
-brew install yarn
-brew install python
-brew install python@2
 brew install the_silver_searcher
 brew install wrk
-brew install rabbitmq
-brew install mysql
 brew install rmtrash
-brew install sqlite
-brew install ipython
-brew install postgresql
-brew install libxmlsec1
 brew install pkg-config
 brew install jq
 brew install fd
@@ -46,4 +31,5 @@ brew install prettyping
 brew install grc
 brew install coreutils
 brew install autojump
-
+brew install zsh-autosuggestions
+brew install asdf
