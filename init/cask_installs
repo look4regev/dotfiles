@@ -1,6 +1,5 @@
-brew install cask
-brew cask install iterm2
-brew cask install sublime-text
-brew cask install skitch
-brew cask install maccy
-brew cask install visual-studio-code
+brew cask install iterm2 --cask
+brew cask install sublime-text --cask
+brew cask install skitch --cask
+brew cask install maccy --cask
+brew cask install visual-studio-code --cask
